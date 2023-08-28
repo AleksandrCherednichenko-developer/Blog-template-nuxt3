@@ -1,0 +1,10 @@
+.header{
+    @include display($align: center, $content: space-between, $gap: 20px);
+    position: sticky;
+    top: 0;
+    z-index: $z-index-90;
+    min-height: var(--hHeader);
+    background-color: $cMischka;
+    border-bottom: var(--base-border);
+    padding: calc-rem(10px);
+}

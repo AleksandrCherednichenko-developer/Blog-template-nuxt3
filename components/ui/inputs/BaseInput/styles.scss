@@ -1,0 +1,60 @@
+.input {
+    &__wrapper {
+        @include display($direction: column, $gap: 4px);
+        width: 100%;
+    }
+
+    &__label {
+
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+
+        :deep(.input__toggle-password) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc-rem(8px);
+        }
+    }
+
+    &__field {
+        @include transit('border, box-shadow');
+        width: 100%;
+        border: var(--base-border);
+        border-radius: calc-rem(8px);
+        padding: calc-rem(8px);
+
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border: var(--base-border-hover);
+        }
+
+        @include hover() {
+            box-shadow: 0 0 5px 1px rgba($cElectricViolet, 0.4);
+        }
+
+        &.error {
+            border-color: rgba($cRedOrange, 0.8);
+        }
+
+        &.has-icon {
+            padding-right: calc-rem(36px);
+        }
+    }
+
+    &__icon-error,
+    &__ticker {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc-rem(8px);
+    }
+
+    &__ticker {
+        color: $cBlack;
+    }
+}

@@ -1,0 +1,93 @@
+.fade {
+    &-enter-active,
+    &-leave-active {
+        transition: opacity .3s ease;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.fade-enter-transition {
+    &-enter-active {
+        transition: opacity .3s ease;
+    }
+
+    &-enter-from,
+    &-leave-active {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &-leave-active {
+        position: absolute;
+    }
+}
+
+.rotate-slide-left {
+    &-enter-active {
+        transform: scaleX(1) ;
+        transition: transform .3s ease;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        transform: scaleX(0) translateX(100px);
+        pointer-events: none;
+    }
+    &-leave-active{
+        position: absolute;
+    }
+}
+
+.left-slide-fade {
+    &-enter-active, {
+        transition: transform 0.3s ease-out;
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    &-enter-from,
+    &-leave-to {
+        transform: scaleX(0);
+    }
+    &-leave-active{
+        position: absolute;
+    }
+}
+
+.fade-slide-left {
+    &-enter-active {
+        transition-property: transform, opacity;
+        transition-duration: 1s;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    &-leave-active {
+        position: absolute;
+    }
+}
+
+.fade-slide-right {
+    &-enter-active {
+        transition-property: transform, opacity;
+        transition-duration: 1s;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    &-leave-active {
+        position: absolute;
+    }
+}

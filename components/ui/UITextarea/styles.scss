@@ -1,0 +1,18 @@
+.textarea-resize {
+    @include transit('border, box-shadow');
+    width: 100%;
+    resize: none;
+    border: var(--base-border);
+    border-radius: calc-rem(8px);
+    padding: calc-rem(8px);
+
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        border: var(--base-border-hover);
+    }
+
+    @include hover() {
+        box-shadow: 0 0 5px 1px rgba($cElectricViolet, 0.4);
+    }
+}

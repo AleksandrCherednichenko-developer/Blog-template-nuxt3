@@ -1,0 +1,52 @@
+.pagination {
+    @include display($align: center, $content: center, $gap: 10px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px rgba($cFiord, 0.3);
+    padding: calc-rem(10px) calc-rem(20px);
+
+    @media #{$mMd} {
+    }
+
+    @media #{$mXs} {
+        padding: calc-rem(10px);
+    }
+
+    &__button {
+        @include display($align: center, $gap: 5px);
+        width: calc-rem(50px);
+
+        &-prev {
+            justify-content: end;
+        }
+
+        &-next {
+            justify-content: start;
+        }
+    }
+
+    &__curren-page {
+        @include display($align: center, $gap: 10px);
+    }
+
+    &__item-per-page {
+        @include display($align: center, $gap: 10px);
+    }
+
+    &__curren-page {
+        @include display($align: center, $gap: 0px);
+
+        &__input {
+            max-width: calc-rem(40px);
+
+            :deep(.input__field) {
+                text-align: center;
+            }
+        }
+
+        &__label {
+            min-width: calc-rem(40px);
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}

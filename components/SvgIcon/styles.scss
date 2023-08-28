@@ -1,0 +1,21 @@
+.icon {
+    &-svg {
+        fill: $cBlack;
+        fill-opacity: .7;
+    }
+
+    &-help {
+        fill: $cOutrageousOrange;
+        fill-opacity: 1;
+    }
+
+    &-airplane {
+        fill: $cHeliotropeapprox;
+        fill-opacity: 1;
+    }
+
+    &-alert {
+        fill: $cMercury;
+        fill-opacity: 1;
+    }
+}

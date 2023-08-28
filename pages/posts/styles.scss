@@ -1,0 +1,8 @@
+.post-page {
+    @include display($direction: column, $gap: 16px);
+
+    &__inner {
+        @include display($content: space-between, $align: center);
+        width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+.hint-icon {
+    @include size(25px);
+    margin: 0 !important;
+    border: none !important;
+
+    .icon-alert {
+        @include size(25px);
+        border-radius: 50%;
+        background-color: $cRedOrange;
+        fill-opacity: 1 !important;
+    }
+}

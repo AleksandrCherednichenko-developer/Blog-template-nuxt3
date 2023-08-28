@@ -1,0 +1,35 @@
+.post__item {
+    @include display($direction: column, $content: space-between, $gap: 8px);
+    @include transit('border, box-shadow, transform');
+    border: var(--base-border);
+    border-radius: 6px;
+    min-height: calc-rem(110px);
+    padding: calc-rem(6px);
+
+    @include hover() {
+        border: var(--base-border-hover);
+        box-shadow: 0 0 5px 1px rgba($cHeliotropeapprox, 1);
+        transform: scale(1.01);
+    }
+
+    @media #{$mMd} {
+        min-height: calc-rem(80px);
+    }
+
+    &-content {
+        @include display($align: center, $content: space-between);
+        width: 100%;
+
+        &__title {
+            @include line-clamp(3);
+        }
+
+        &__text {
+            @include line-clamp(5);
+        }
+
+        &__buttons{
+            @include display();
+        }
+    }
+}

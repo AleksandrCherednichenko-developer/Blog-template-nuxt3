@@ -1,0 +1,44 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+@supports (height: 100dvh) and (width: 100dvw) {
+    body {
+        min-height: 100dvh;
+    }
+}
+
+body {
+    min-height: 100vh;
+    font-size: var(--rem);
+    font-family: $fGilroy;
+    font-weight: $fBold;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    cursor: default;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+
+    &.scroll-locked {
+        padding-right: 0 !important;
+    }
+}
+
+.main {
+    @include display($align: flex-start, $gap: 0px);
+
+    &__page{
+        padding: calc-rem(26px);
+        width: 100%;
+    }
+}
+
+.uppercase-first-letter {
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+

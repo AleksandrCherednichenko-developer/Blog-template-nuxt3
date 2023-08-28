@@ -1,0 +1,34 @@
+@supports (height: 100dvh) and (width: 100dvw) and (max-height: 100dvh) and (max-width: 100dvh) {
+    .modal-form {
+        max-width: 70dvh;
+        max-height: 70dvh;
+    }
+}
+
+.modal-form {
+    @include display($direction: column, $align: center, $content: space-between);
+    max-width: 70vh;
+    max-height: 70vh;
+    background-color: $cMercury;
+    border-radius: 16px;
+    padding: calc-rem(16px);
+
+    &__header {
+        @include display($align: center, $content: space-between);
+        width: 100%;
+    }
+
+    &__content {
+        @include display($direction: column, $align: center, $content: space-between);
+        min-width: 30vw;
+    }
+
+    &__control {
+    }
+
+    &__button-close {
+        //@include size(20px)
+        padding: 0;
+        border: none;
+    }
+}

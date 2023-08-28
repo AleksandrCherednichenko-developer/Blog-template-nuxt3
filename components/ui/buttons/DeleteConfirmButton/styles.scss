@@ -1,0 +1,15 @@
+.delete-confirm__buttons {
+    @include display();
+
+    .confirm__buttons {
+        @include display($gap: 8px);
+
+        .apply-btn {
+            background-color: $cGreen;
+        }
+
+        .cancel-btn {
+            background-color: $cRedOrange;
+        }
+    }
+}

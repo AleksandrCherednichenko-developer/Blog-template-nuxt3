@@ -1,0 +1,6 @@
+.form__login{
+    @include display($direction: column, $align: center, $gap: 20px);
+    border: var(--base-border);
+    border-radius: calc-rem($borderRadius);
+    padding: calc-rem(20px);
+}

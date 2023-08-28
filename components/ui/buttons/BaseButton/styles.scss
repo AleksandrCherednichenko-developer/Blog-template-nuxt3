@@ -1,0 +1,43 @@
+.button__base {
+    @include transit('border, color');
+    @include display();
+    @include clear-button;
+    border: var(--base-border);
+    border-radius: calc-rem($borderRadius);
+    padding: calc-rem(4px);
+
+    &:disabled {
+        user-select: none;
+        opacity: 0.5;
+        cursor: not-allowed;
+        tab-index: -1;
+    }
+
+    &:not(:disabled) {
+        @include hover(){
+            color: $cHeliotropeapprox;
+            border: var(--base-border-hover);
+
+            .button__base-icon {
+                fill: var(--icon-hover);
+                fill-opacity: 1;
+            }
+        }
+    }
+
+    &.disabled-hover {
+        @include hover(){
+            color: $cHeliotropeapprox;
+            border: none;
+        }
+    }
+
+    &-icon {
+        @include transit('fill, fill-opacity');
+        @include size(18px);
+    }
+
+    &-text {
+
+    }
+}

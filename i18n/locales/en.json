@@ -1,0 +1,23 @@
+{
+    "welcome": "Welcome",
+    "logIn": "Log in",
+    "logOut": "Log out",
+    "login": "Login",
+    "password": "Password",
+    "more": "More",
+    "createPost": "Create post",
+    "create": "Create",
+    "title": "Title",
+    "text": "Text",
+    "back": "Back",
+    "dashboard": "Dashboard",
+    "posts": "Posts",
+    "users": "Users",
+    "postsList": "Posts list",
+    "author": "Author",
+    "post": "Post",
+    "locales": {
+        "ru": "Russian",
+        "en": "English"
+    }
+}

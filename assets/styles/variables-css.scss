@@ -1,0 +1,87 @@
+:root {
+    --rem: #{$baseRem};
+    --base-border: #{2px solid $cFiord};
+
+    // HOVER
+    --base-border-hover: #{2px solid rgba($cHeliotropeapprox, 1)};
+    --icon-hover: #{$cHeliotropeapprox};
+
+    --hHeader: #{$hHeader};
+    --basePadding: #{$basePadding};
+
+    --paddingNavBar: #{$paddingNavBar};
+    --wNavBar: #{$wNavBar};
+    --wNavBarClose: calc((var(--paddingNavBar) * 2));
+    --wNavBarActive: calc((var(--paddingNavBar) * 2) + var(--wNavBar));
+
+
+    // Head title
+    --fs-h1: #{$fz-h1};
+    --fs-h2: #{$fz-h2};
+    --fs-h3: #{$fz-h3};
+    --fs-h4: #{$fz-h4};
+    --fs-h5: #{$fz-h5};
+    --fs-h6: #{$fz-h6};
+
+    // Breakpoints
+    --bXl: #{$bXl};
+    --bLg: #{$bLg};
+    --bMd: #{$bMd};
+    --bSm: #{$bSm};
+    --bXs: #{$bXs};
+
+    --bHXl: #{$bHXl};
+    --bHLg: #{$bHLg};
+    --bHMd: #{$bHMd};
+    --bHSm: #{$bHSm};
+    --bHXs: #{$bHXs};
+
+
+    @media #{$mXl} {
+        --rem: 14px;
+
+        --hHeader: 50px;
+
+        --paddingNavBar: 15px;
+
+        --fs-h1: 38px;
+        --fs-h2: 30px;
+        --fs-h3: 24px;
+        --fs-h4: 22px;
+        --fs-h5: 20px;
+        --fs-h6: 16px;
+    }
+
+    @media #{$mXl}, #{$mHLg} {
+        --rem: 14px;
+    }
+
+    @media #{$mMd} {
+        --rem: 12px;
+
+        --fs-h1: 28px;
+        --fs-h2: 24px;
+        --fs-h3: 20px;
+        --fs-h4: 18px;
+        --fs-h5: 16px;
+        --fs-h6: 14px;
+    }
+
+    @media #{$mSm} {
+        --rem: 10px;
+
+        --hHeader: 40px;
+
+        --wNavBar: 180px;
+
+        --fs-h1: 24px;
+        --fs-h2: 20px;
+        --fs-h3: 18px;
+        --fs-h4: 16px;
+        --fs-h5: 14px;
+        --fs-h6: 12px;
+    }
+
+    @media #{$mXs} {
+    }
+}

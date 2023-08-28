@@ -1,0 +1,16 @@
+@supports (height: 100dvh) and (width: 100dvw) {
+    .layout {
+        min-height: 100dvh;
+        min-width: 100dvw;
+    }
+}
+
+.layout {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    &__loader,
+    &__login{
+        @include display($align: center, $content: center);
+    }
+}
